@@ -1,0 +1,17 @@
+{
+  "name": "practice3",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Практична робота №3 — Generic In-Memory Repository для автозапчастин",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  }
+}
