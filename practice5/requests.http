@@ -1,0 +1,23 @@
+@base = http://localhost:3000
+### Початкові автозапчастини
+GET {{base}}/auto-parts
+### Створення
+# @name createdPart
+POST {{base}}/auto-parts
+Content-Type: application/json
+
+{"title":"Масляний фільтр Volkswagen","price":500,"oemCode":"VW-123","condition":"new","carBrand":"Volkswagen"}
+### Замовлення
+POST {{base}}/orders
+Content-Type: application/json
+
+{"productId":"1","quantity":2}
+### Неіснуюча запчастина (404)
+POST {{base}}/orders
+Content-Type: application/json
+
+{"productId":"missing","quantity":2}
+### Усі замовлення
+GET {{base}}/orders
+### Request scope (виконати двічі)
+GET {{base}}/auto-parts/request-id
